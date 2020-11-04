@@ -168,4 +168,4 @@ const coordinates = [{ x: 1, y: 1 }, { x: 2, y: -1 }]
 /**
  * @type {displayNamesCB}
  */
-let cb
+let cb // notice that when calling `cb()` the param `names` will be shown
