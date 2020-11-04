@@ -161,20 +161,8 @@ function getFullName (props) { console.log(props) }
 // ==================================================
 
 /**
- * Example of an `array` of any using `[]` literal
- * @param {[]} vegetables The list of vegetables
- */
-function displayVegetables (vegetables) { console.log(vegetables) }
-
-/**
- * Example of an `array` of any using `Array` constructor
- * @param {Array} fruits The list of fruits
- */
-function displayFruits (fruits) { console.log(fruits) }
-
-/**
- * Example of an `array` of any using `Array<>` notation
- * @param {Array<>} candy The list of candy
+ * Example of an `array` of any using `Array<*>` notation
+ * @param {Array<*>} candy The list of candy
  */
 function displayCandy (candy) { console.log(candy) }
 

@@ -117,20 +117,14 @@ const dictionary = { A: 10, B: 20, C: 30 }
 // ==================================================
 
 /**
- * Example of an `array` of any using `[]` literal
- * @type {[]}
- */
-let vegetables // notice how this only shows `[]` instead of `any[]`
-
-/**
  * Example of an `array` of any using `Array` constructor
  * @type {Array}
  */
 let fruits
 
 /**
- * Example of an `array` of any using `Array<>` notation
- * @type {Array<>}
+ * Example of an `array` of any using `Array<*>` notation
+ * @type {Array<*>}
  */
 let candy
 
