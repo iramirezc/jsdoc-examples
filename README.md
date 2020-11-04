@@ -5,3 +5,4 @@ I'm tired of the poor examples listed in the [JSDoc documentation](https://jsdoc
 List of contents:
 
 * [Data Types](/src/data-types.js)
+* [Function Parameters](/src/params.js)
