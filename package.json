@@ -1,0 +1,26 @@
+{
+  "name": "jsdoc-examples",
+  "version": "0.0.1",
+  "description": "Code snippets documented with JSDoc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iramirezc/jsdoc-examples.git"
+  },
+  "keywords": [
+    "jsdoc",
+    "examples"
+  ],
+  "author": "Isaac Ramirez <iramirezc@live.com.mx>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iramirezc/jsdoc-examples/issues"
+  },
+  "homepage": "https://github.com/iramirezc/jsdoc-examples#readme",
+  "devDependencies": {
+    "eslint": "^7.12.1"
+  }
+}
