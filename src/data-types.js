@@ -1,7 +1,8 @@
-/* eslint-disable no-unused-vars *//* global BigInt */
-// Ref:
-// - https://jsdoc.app/tags-type.html
-// - https://github.com/google/closure-compiler/wiki/Types-in-the-Closure-Type-System
+/***
+ * Ref:
+ * - https://jsdoc.app/tags-type.html
+ * - https://github.com/google/closure-compiler/wiki/Types-in-the-Closure-Type-System
+ */
 
 // Primitive Types
 // ==================================================
@@ -34,7 +35,7 @@ const number = 9
  * Example of a `bigint`
  * @type {bigint}
  */
-const bigNumber = BigInt(2) ** BigInt(53)
+const bigNumber = 2n ** 53n
 
 /**
  * Example of a `string`

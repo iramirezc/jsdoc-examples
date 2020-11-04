@@ -1,5 +1,8 @@
-/* eslint-disable no-unused-vars */
-// Ref: https://jsdoc.app/tags-type.html
+/***
+ * Ref:
+ * - https://jsdoc.app/tags-type.html
+ * - https://github.com/google/closure-compiler/wiki/Types-in-the-Closure-Type-System
+ */
 
 // Primitive Types as Function Parameters
 // ==================================================
