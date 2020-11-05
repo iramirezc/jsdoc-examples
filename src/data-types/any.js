@@ -1,13 +1,13 @@
 /** @module data-types/any */
 
 /**
- * Example of any type `*`
+ * Example of a variable that can hold any type `*`
  * @type {*}
  */
 let anyValue = { settings: [] }
 
 /**
- * Example of multiple type
+ * Example of a variable that can hold multiple types
  * @type {(number|string|boolean)}
  */
-let eitherANumberOrAStringOrABoolean = true
+const eitherANumberOrAStringOrABoolean = true

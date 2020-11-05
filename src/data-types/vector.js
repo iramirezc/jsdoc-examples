@@ -1,8 +1,8 @@
-/** @module data-types/typedef */
+/** @module data-types/vector */
 
 /**
  * @typedef Vector
- * @type {object}
+ * @type {Object}
  * @property {string} x - Point X
  * @property {string} y - Point Y
  */

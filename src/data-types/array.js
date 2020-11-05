@@ -95,3 +95,27 @@ const arrayOfVectors = [{ x: 1, y: 1 }, { x: 2, y: -1 }]
  * @type {Array<Vector>}
  */
 const arrayOfVectors2 = [{ x: 1, y: 1 }, { x: 2, y: -1 }]
+
+/**
+ * Example of an array of objects `Array<{ name: string, age: number, admin: boolean }>`
+ * @type {Array<{ name: string, age: number, admin: boolean }>}
+ */
+const arrayOfObjectsWithSchema = [{ name: 'Jon', age: 40, admin: false }, { name: 'Doe', age: 50, admin: true }]
+
+/**
+ * Example of an array of objects `Array<Object<string, boolean>>`
+ * @type {Array<Object<string, boolean>>}
+ */
+const arrayOfObjectsWithStringKeysAndBooleanValues = [{ isAdmin: true, hasAccess: false, isHuman: true }]
+
+/**
+ * Example of an array of objects `Object[]`
+ * @type {Object[]}
+ */
+const arrayOfObjectsWithAnySchema = [{ x: 1 }, { name: 'Nahum' }, { isTeaPot: true }]
+
+/**
+ * Example of an array of objects `Array<Object>`
+ * @type {Array<Object>}
+ */
+const arrayOfObjectsWithAnySchema2 = [{ x: 1 }, { name: 'Nahum' }, { isTeaPot: true }]
