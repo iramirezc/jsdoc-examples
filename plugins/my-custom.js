@@ -1,3 +1,6 @@
+// code needed to serialize BigInt
+BigInt.prototype.toJSON = function() { return this.toString() }
+
 exports.handlers = {
   parseComplete: function (e) {
     console.log(`Total files processed: ${e.sourcefiles.length}`)
