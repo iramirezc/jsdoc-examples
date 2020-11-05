@@ -4,6 +4,7 @@
   "description": "Code snippets documented with JSDoc",
   "main": "index.js",
   "scripts": {
+    "docs": "jsdoc -c ./conf.json --pedantic --verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/iramirezc/jsdoc-examples#readme",
   "devDependencies": {
-    "eslint": "^7.12.1"
+    "eslint": "^7.12.1",
+    "jsdoc": "~3.6.6"
   }
 }

@@ -1,0 +1,37 @@
+{
+  "plugins": [
+    "plugins/markdown",
+    "plugins/my-custom"
+  ],
+  "recurseDepth": 10,
+  "source": {
+    "include": ["./src"],
+    "exclude": [],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "sourceType": "module",
+  "opts": {
+    "template": "templates/default",
+    "encoding": "utf8",
+    "destination": "./docs",
+    "recurse": true,
+    "readme": "./README.md"
+  },
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": true,
+      "staticFiles": {
+        "include": ["./static"]
+      },
+      "includeDate": false,
+      "useLongnameInNav": false
+    }
+  }
+}
