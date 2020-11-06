@@ -1,15 +1,15 @@
 /** @module tags/@callback */
 
 /**
- * @callback myCallback
- * @param {number[]} ids - An array of numbers representing the IDs
+ * @callback fetchUsersByIdsCB
+ * @param {number[]} ids - An array of numbers representing the Users IDs
  */
 
 /**
- * @summary `@type {myCallback}`
- * @description Example of declaring a variable to be a callback function.
+ * @summary `@type {fetchUsersByIdsCB}`
+ * @description Example of declaring a variable to be a callback function `fetchUsersByIdsCB`.
  * @example <caption>Calling the callback with the correct arguments.</caption>
- * aCallbackFunction([1, 2, 3])
- * @type {myCallback}
+ * fetchUsers([1, 2, 3])
+ * @type {fetchUsersByIdsCB}
  */
-const aCallbackFunction = function (ids) { /* noop */ }
+const fetchUsers = function (ids) { /* noop */ }
