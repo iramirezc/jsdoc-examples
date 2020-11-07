@@ -1,0 +1,13 @@
+{
+  "starter": {
+      "title": "Getting started with JSDoc",
+      "children": {
+          "command-line": {
+              "title": "The Command-line"
+          },
+          "tags": {
+              "title": "Tags"
+          }
+      }
+  }
+}

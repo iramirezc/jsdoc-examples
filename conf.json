@@ -19,7 +19,8 @@
     "encoding": "utf8",
     "destination": "./docs",
     "recurse": true,
-    "readme": "./README.md"
+    "readme": "./README.md",
+    "tutorials": "./tutorials"
   },
   "tags": {
     "allowUnknownTags": true,
