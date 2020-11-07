@@ -3,6 +3,9 @@
     "plugins/markdown",
     "plugins/my-custom"
   ],
+  "markdown": {
+    "tags": ["note"]
+  },
   "recurseDepth": 10,
   "source": {
     "include": ["./src"],

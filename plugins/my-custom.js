@@ -10,7 +10,7 @@ exports.handlers = {
 exports.defineTags = function (dictionary) {
   dictionary.defineTag('note', {
     onTagged: function (doclet, tag) {
-      doclet.description = `<em><strong>NOTE:</strong>&nbsp;${tag.text}</em>`
+      doclet.description = `${doclet.description}<p><em><strong>NOTE:</strong>&nbsp;${tag.text}</em></p>`
     }
   })
 }
