@@ -1,3 +1,5 @@
+/** @module markdown */
+
 /**
  * @description Example of how the **Markdown Plugin** works.
  * @note This is my custom `@note` tag and should be recognized by the **Markdown Plugin** as well.
