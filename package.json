@@ -4,7 +4,7 @@
   "description": "Code snippets documented with JSDoc",
   "main": "index.js",
   "scripts": {
-    "docs": "jsdoc -c ./conf.json --pedantic --verbose",
+    "docs": "scripts/jsdoc.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
