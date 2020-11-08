@@ -6,7 +6,7 @@
  */
 
 /**
- * @summary `@type {fetchUsersByIdsCB}`
+ * @summary `@type {fetchUsersByIdsCB}` (callback)
  * @description Example of declaring a variable to be a callback function `fetchUsersByIdsCB`.
  * @example <caption>Calling the callback with the correct arguments.</caption>
  * fetchUsers([1, 2, 3])
