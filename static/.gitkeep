@@ -1,0 +1,12 @@
+# Include your static files into this folder for your JSDoc.
+#
+# Example:
+# - static
+# -- img
+# ---- kitty.png
+# ---- octocat.png
+#
+# Then, in your docs, use the `img` tag to link them.
+#
+# Example (in your JSDoc comment):
+# <img src="img/kitty.png">
