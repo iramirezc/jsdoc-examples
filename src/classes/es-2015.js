@@ -78,11 +78,14 @@ const ASimpleClassFromExpression = class {
 /**
  * This is the description of `ASubClass`.
  * @note Class documented by using the `@extends` tag.
- * @extends ASimpleClass
+ * @note Notice how the inherit method `publicMethod` lists **Overrides**.<br>
+ * That's because we had the `constructor` overridden.
+ * @extends module:classes/ES2015~ASimpleClass
  */
 class ASubClass extends ASimpleClass {
   /**
-   * This is the description of the `constructor`.
+   * This is the description of my own `constructor`.
+   * @note The `constructor` **overriding** occurs here.
    * @param {Object} props - Any props `Object`.
    * @param {Object} props.myProps - The actual props for this subclass.
    */
@@ -120,20 +123,12 @@ class ASubClass extends ASimpleClass {
 /**
  * This is the description of `AnotherSubClass`.
  * @note Class documented by using the `@augments` tag.
- * @augments ASimpleClassFromExpression
+ * @note Notice how the inherit method `publicMethod` does **NOT** list **Overrides**.<br>
+ * That's because are **NOT** overriding the `constructor`.
+ * @augments module:classes/ES2015~ASimpleClassFromExpression
  */
 class AnotherSubClass extends ASimpleClassFromExpression {
-  /**
-   * This is the description of the `constructor`.
-   * @param {Object} props - Any props `Object`.
-   * @param {Object} props.myProps - The actual props for this subclass.
-   */
-  constructor(props) {
-    const { myProps, ...propsForParent } = props
-
-    super(propsForParent)
-    this.myProps = myProps
-  }
+  /* NOTE: The removal of the constructor is intended */
 
   /**
    * @summary This is the summary of the `myOwnPublicMethod`.

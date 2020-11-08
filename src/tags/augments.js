@@ -32,7 +32,7 @@ class SuperClassA {
 
 /**
  * This is the description of `SubClassA`.
- * @augments SuperClassA
+ * @augments module:tags/@augments~SuperClassA
  */
 class SubClassA extends SuperClassA {}
 
