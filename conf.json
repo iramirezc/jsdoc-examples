@@ -15,7 +15,7 @@
   },
   "sourceType": "module",
   "opts": {
-    "template": "templates/default",
+    "template": "./node_modules/ink-docstrap/template",
     "encoding": "utf8",
     "destination": "./docs",
     "recurse": true,
@@ -36,6 +36,12 @@
       },
       "includeDate": false,
       "useLongnameInNav": false
-    }
+    },
+    "theme": "simplex",
+    "includeDate": false,
+    "navType": "vertical",
+    "inverseNav": false,
+    "linenums": true,
+    "sort": false
   }
 }
