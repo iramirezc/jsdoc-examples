@@ -1,49 +1,16 @@
 /** @module tags/@type */
 
-/**
- * @summary `@type {*}`
- * @description Example of a variable that can hold any type.
- * @example
- * anyType = null
- * anyType = undefined
- * anyType = true
- * anyType = 1
- * anyType = 'Hello!'
- * anyType = []
- * anyType = {}
- * anyType = Symbol.iterator
- * @type {*}
- */
-let anyType = [1, true, {}, ['a']]
+// Primitive Types
+// ==================================================
 
 /**
- * @summary `@type {(number|string|boolean)}`
- * @description Example of a variable that can be either a `number`, a `string` or a `boolean`.
+ * @summary `@type {bigint}`
+ * @description Example of a variable of type `bigint`.
  * @example
- * anyOfTheType = 1
- * anyOfTheType = 'Hello!'
- * anyOfTheType = false
- * @type {(number|string|boolean)}
+ * aBigInt = 2n ** 3n // 8n
+ * @type {bigint}
  */
-let anyOfTheType = true
-
-/**
- * @summary `@type {null}`
- * @description Example of a variable of type `null`.
- * @example
- * aNull = null
- * @type {null}
- */
-let aNull = null
-
-/**
- * @summary `@type {undefined}`
- * @description Example of a variable of type `undefined`.
- * @example
- * anUndefined = undefined 
- * @type {undefined}
- */
-let anUndefined = undefined
+let aBigInt = 1n
 
 /**
  * @summary `@type {boolean}`
@@ -56,6 +23,15 @@ let anUndefined = undefined
 let aBoolean = true
 
 /**
+ * @summary `@type {null}`
+ * @description Example of a variable of type `null`.
+ * @example
+ * aNull = null
+ * @type {null}
+ */
+let aNull = null
+
+/**
  * @summary `@type {number}`
  * @description Example of a variable of type `number`.
  * @example
@@ -64,15 +40,6 @@ let aBoolean = true
  * @type {number}
  */
 let aNumber = 1
-
-/**
- * @summary `@type {bigint}`
- * @description Example of a variable of type `bigint`.
- * @example
- * aBigInt = 2n ** 3n // 8n
- * @type {bigint}
- */
-let aBigInt = 1n
 
 /**
  * @summary `@type {string}`
@@ -93,8 +60,50 @@ let aString = ''
 let aSymbol = Symbol.iterator
 
 /**
+ * @summary `@type {undefined}`
+ * @description Example of a variable of type `undefined`.
+ * @example
+ * anUndefined = undefined 
+ * @type {undefined}
+ */
+let anUndefined = undefined
+
+// Any, Multiple, Nullable, Non-Nullable, Optional, Unknown
+// ==================================================
+
+/**
+ * @summary `@type {*}`
+ * @description Example of a variable that can hold any type.
+ * @example
+ * anyType = null
+ * anyType = undefined
+ * anyType = true
+ * anyType = 1
+ * anyType = 'Hello!'
+ * anyType = []
+ * anyType = {}
+ * anyType = Symbol.iterator
+ * @type {*}
+ */
+let anyType = [1, true, {}, ['a']]
+
+/**
+ * @summary `@type {(number|string|boolean)}`
+ * @description Example of a variable that can be
+ * either a `number`, a `string` or a `boolean`.
+ * @example
+ * anyOfTheType = 1
+ * anyOfTheType = 'Hello!'
+ * anyOfTheType = false
+ * @type {(number|string|boolean)}
+ */
+let anyOfTheType = true
+
+/**
  * @summary `@type {?number}`
- * @description Example of a variable that can be either a `number` or `null` (nullable).
+ * @description Example of a variable that can be
+ * either a `number` or `null` (nullable).
+ * @note This can be applied to any other type.
  * @example
  * aNullableNumber = 10
  * aNullableNumber = null
@@ -105,6 +114,7 @@ let aNullableNumber = null
 /**
  * @summary `@type {!string}`
  * @description Example of a variable that MUST be a `string`, but never `null` (non-nullable).
+ * @note This can be applied to any other type.
  * @example
  * aNonNullableString = 'Hello!'
  * aNonNullableString = null // this should NOT be allowed
@@ -113,8 +123,20 @@ let aNullableNumber = null
 let aNonNullableString = ''
 
 /**
+ * @summary `@type {?}`
+ * @description Example of an unknown type variable.
+ * @example
+ * anUnknown = someVarWhichINotKnowTheType
+ * @type {?}
+ */
+let unknown = '?'
+
+// Objects
+// ==================================================
+
+/**
  * @summary `@type {Object}`
- * @description Example of an object with any schema.
+ * @description Example of an `Object` with any schema.
  * @example
  * anObjectWithAnySchema = { access: true, secret: 'pa$$w0rd' }
  * anObjectWithAnySchema = { id: 1, firstName: 'Jon', lastName: 'Doe' }
@@ -124,7 +146,7 @@ let anObjectWithAnySchema = {}
 
 /**
  * @summary `@type {{ name: string, age: number, admin: boolean, location: Vector, skills }}`
- * @description Example of an object with a defined schema.
+ * @description Example of an `Object` with a defined schema.
  * @example
  * anObjectWithDefinedSchema = {
  *    name: 'Jon',
@@ -147,17 +169,21 @@ let anObjectWithDefinedSchema = { name: 'Jon', age: 40, admin: true, location: {
 
 /**
  * @summary `@type {Object<string, number>}`
- * @description Example of an object with keys of type `string` and values of type `number`.
+ * @description Example of an `Object` with `string` keys and `number` values.
+ * @note This can be applied to any other type.
  * @example
- * anObjectOfKeysWithSameValueType = { A: 10, B: 20, C: 30 }
- * anObjectOfKeysWithSameValueType = { apples: 11, bananas: 2, chocolate: 3 }
+ * anObjectOfKeyValues = { min: 1, max: 10 }
+ * anObjectOfKeyValues = { apples: 11, bananas: 2, chocolate: 3 }
  * @type {Object<string, number>}
  */
-let anObjectOfKeysWithSameValueType = { MAX: 100, MIN: 1 }
+let anObjectOfKeyValues = { min: 1, max: 10 }
+
+// Arrays
+// ==================================================
 
 /**
  * @summary `@type {Array}`
- * @description Example of an array of any type.
+ * @description Example of an `Array` of any type.
  * @example
  * arrayOfAny = [1, true, 'Hello!']
  * @type {Array}
@@ -166,7 +192,7 @@ let arrayOfAny = [1, true, 'Hello!']
 
 /**
  * @summary `@type {Array<*>}`
- * @description Example 2 of an array of any type.
+ * @description Example 2 of an `Array` of any type.
  * @example
  * arrayOfAny2 = [{}, [], false]
  * @type {Array<*>}
@@ -174,142 +200,47 @@ let arrayOfAny = [1, true, 'Hello!']
 let arrayOfAny2 = [{}, [], false]
 
 /**
- * @summary `@type {Array<null>}`
- * @description Example of an array of `null`.
- * @example
- * arrayOfNull = [null, null, null]
- * @type {Array<null>}
- */
-let arrayOfNull = [null, null, null]
-
-/**
- * @summary `@type {Array<undefined>}`
- * @description Example of an array of `undefined`.
- * @example
- * arrayOfUndefined = [undefined, undefined, undefined]
- * @type {Array<undefined>}
- */
-let arrayOfUndefined = [undefined, undefined, undefined]
-
-/**
- * @summary `@type {boolean[]}`
- * @description Example of an array of `boolean`s.
- * @example
- * arrayOfBooleans = [true, false, true]
- * @type {boolean[]}
- */
-let arrayOfBooleans = [true, false, true]
-
-/**
- * @summary `@type {Array<boolean>}`
- * @description Example 2 of an array of `boolean`s.
- * @example
- * arrayOfBooleans2 = [true, false, true]
- * @type {Array<boolean>}
- */
-let arrayOfBooleans2 = [true, false, true]
-
-/**
- * @summary `@type {number[]}`
- * @description Example of an array of `number`s.
- * @example
- * arrayOfNumbers = [1, 2, 3]
- * @type {number[]}
- */
-let arrayOfNumbers = [1, 2, 3]
-
-/**
  * @summary `@type {Array<number>}`
- * @description Example 2 of an array of `number`s.
+ * @description Example of an `Array` of `number` values.
+ * @note This can be applied to any other type:
+ * `Array<bigint>`, `Array<boolean>`, `Array<null>`, `Array<number>`,
+ * `Array<string>`, `Array<symbol>`, `Array<undefined>`,
+ * `Array<Array>`, `Array<Object>`, `Array<Vector>`, etc.
  * @example
- * arrayOfNumbers2 = [1, 2, 3]
+ * arrayOfType = [1, 2, 3]
  * @type {Array<number>}
  */
-let arrayOfNumbers2 = [1, 2, 3]
-
-/**
- * @summary `@type {bigint[]}`
- * @description Example of an array of big numbers `bigint`.
- * @example
- * arrayOfBigNumbers = [1n, 2n, 3n]
- * @type {bigint[]}
- */
-let arrayOfBigNumbers = [1n, 2n, 3n]
-
-/**
- * @summary `@type {Array<BigInt>}`
- * @description Example 2 of an array of big numbers `bigint`.
- * @example
- * arrayOfBigNumbers2 = [1n, 2n, 3n]
- * @type {Array<BigInt>}
- */
-let arrayOfBigNumbers2 = [1n, 2n, 3n]
+let arrayOfType = [1, 2, 3]
 
 /**
  * @summary `@type {string[]}`
- * @description Example of an array of `string`s.
+ * @description Example of an `Array` of `string` values.
+ * @note This can be applied to some other type:
+ * `bigint[]`, `boolean[]`, `number[]`,
+ * `string[]`, `symbol[]`,
+ * `Object[]`, `Vector[]`, etc.
  * @example
- * arrayOfStrings = ['a', 'b', 'c']
+ * arrayOfType2 = ['a', 'b', 'c']
  * @type {string[]}
  */
-let arrayOfStrings = ['a', 'b', 'c']
+let arrayOfType2 = ['a', 'b', 'c']
 
 /**
- * @summary `@type {Array<string>}`
- * @description Example 2 of an array of `string`s.
- * @example
- * arrayOfStrings2 = ['a', 'b', 'c']
- * @type {Array<string>}
- */
-let arrayOfStrings2 = ['a', 'b', 'c']
-
-/**
- * @summary `@type {symbol[]}`
- * @description Example of an array of `symbol`s.
- * @example
- * arrayOfSymbols = [Symbol.iterator]
- * @type {symbol[]}
- */
-let arrayOfSymbols = [Symbol.iterator]
-
-/**
- * @summary `@type {Array<symbol>}`
- * @description Example 2 of an array of `symbol`s.
- * @example
- * arrayOfSymbols2 = [Symbol.iterator]
- * @type {Array<symbol>}
- */
-let arrayOfSymbols2 = [Symbol.iterator]
-
-/**
- * @summary `@type {Object[]}`
- * @description Example of an array of objects with any schema.
+ * @summary `@type {Array<Object>}`
+ * @description Example of an `Array` of `Object` values with any schema.
  * @example
  * arrayOfObjectsWithAnySchema = [
  *    { x: 1 },
  *    { name: 'Doe' },
  *    { isTeaPot: true }
  * ]
- * @type {Object[]}
+ * @type {Array<Object>}
  */
 let arrayOfObjectsWithAnySchema = [{ x: 1 }, { name: 'Doe' }, { isTeaPot: true }]
 
 /**
- * @summary `@type {Array<Object>}`
- * @description Example 2 of an array of objects with any schema.
- * @example
- * arrayOfObjectsWithAnySchema2 = [
- *    { x: 1 },
- *    { name: 'Doe' },
- *    { isTeaPot: true }
- * ]
- * @type {Array<Object>}
- */
-let arrayOfObjectsWithAnySchema2 = [{ x: 1 }, { name: 'Doe' }, { isTeaPot: true }]
-
-/**
  * @summary `@type {Array<{ name: string, age: number, admin: boolean }>}`
- * @description Example of an array of objects with a defined schema.
+ * @description Example of an `Array` of `Object` values with a defined schema.
  * @example
  * arrayOfObjectsWithSchema = [
  *    {
@@ -329,9 +260,9 @@ let arrayOfObjectsWithSchema = [{ name: 'Jon', age: 40, admin: false }, { name: 
 
 /**
  * @summary `@type {Array<Object<string, boolean>>}`
- * @description Example of an array of objects with `string` keys and `boolean` values.
+ * @description Example of an `Array` of `Object` values with `string` keys and `boolean` values.
  * @example
- * arrayOfObjectsWithStringKeysAndBooleanValues = [
+ * arrayOfObjectsOfKeyValues = [
  *    {
  *      isAdmin: true,
  *      hasAccess: false,
@@ -340,11 +271,12 @@ let arrayOfObjectsWithSchema = [{ name: 'Jon', age: 40, admin: false }, { name: 
  * ]
  * @type {Array<Object<string, boolean>>}
  */
-let arrayOfObjectsWithStringKeysAndBooleanValues = [{ isAdmin: true, hasAccess: false, isHuman: true }]
+let arrayOfObjectsOfKeyValues = [{ isAdmin: true, hasAccess: false, isHuman: true }]
 
 /**
  * @summary `@type {Vector[]}`
- * @description Example of an array of a defined type `Vector`.
+ * @description Example of an `Array` of a defined type `Vector`.
+ * @see {@link module:tags/@typedef~Vector}
  * @example
  * arrayOfVectors = [{ x: 1, y: 1 }, { x: 2, y: -1 }]
  * @type {Vector[]}
@@ -352,17 +284,8 @@ let arrayOfObjectsWithStringKeysAndBooleanValues = [{ isAdmin: true, hasAccess: 
 let arrayOfVectors = [{ x: 1, y: 1 }, { x: 2, y: -1 }]
 
 /**
- * @summary `@type {Array<Vector>}`
- * @description Example 2 of an array of a defined type `Vector`.
- * @example
- * arrayOfVectors2 = [{ x: 1, y: 1 }, { x: 2, y: -1 }]
- * @type {Array<Vector>}
- */
-let arrayOfVectors2 = [{ x: 1, y: 1 }, { x: 2, y: -1 }]
-
-/**
  * @summary `@type {Array<Array>}`
- * @description Example of an array of arrays of any schema.
+ * @description Example of an `Array` of `Array`s of any schema.
  * @example
  * arrayOfArraysOfAny = [
  *    [1, true, null],
@@ -374,7 +297,7 @@ let arrayOfArraysOfAny = [[1, true, null], ['a', false, undefined]]
 
 /**
  * @summary `@type {Array<Array<number>>}`
- * @description Example of an array of arrays of `number`s.
+ * @description Example of an `Array` of `Array`s of `number`s.
  * @example
  * arrayOfArraysOfNumbers = [
  *    [1, 2, 3],
@@ -386,7 +309,7 @@ let arrayOfArraysOfNumbers = [[1, 2, 3], [4, 5, 6]]
 
 /**
  * @summary `@type {Array<Array<{name: string, age: number}>>}`
- * @description Example of an array of arrays of objects with a defined schema.
+ * @description Example of an `Array` of `Array`s of `Object` values with a defined schema.
  * @example
  * arrayOfArraysOfObjectsWithSchema = [
  *    [{ name: 'Joe', age: 30 }, { name: 'Doe', age: 31 }],
