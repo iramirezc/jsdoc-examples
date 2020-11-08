@@ -1,14 +1,14 @@
 # JSDoc Examples
 
-I'm tired of the poor examples listed in the [JSDoc documentation](https://jsdoc.app/index.html), so I decided to create my own.
+Decided to create a repo with my own [JSDoc](https://jsdoc.app/index.html) examples so that I can understand what I'm doing!
 
 ## How to use this repo
 
 ### As a quick reference guide
 
-Just explore any of the JS files into the `src` folder to see how the code is documented with [JSDoc](https://jsdoc.app/index.html).
+Explore any of the JS files into the `src` folder to see examples of how the code is documented with [JSDoc](https://jsdoc.app/index.html).
 
-### Generating the JSDocs in your local
+### Generating the JSDocs in your local and watch them for real!
 
 Clone the repo:
 
@@ -29,3 +29,5 @@ yarn docs
 ```
 
 Open the `docs/index.html` file in your favorite browser.
+
+> _**NOTE:** I would recommend to use a live server to watch any changes in real time. See [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VSCode._
