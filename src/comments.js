@@ -1,4 +1,4 @@
-/** @module comments */
+/** @module general/comments */
 
 /*
  * This block comment with syntax `/*` should be ignored!

@@ -1,4 +1,4 @@
-/** @module markdown */
+/** @module general/markdown */
 
 /**
  * @description Example of how the **Markdown Plugin** works.
