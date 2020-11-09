@@ -1,10 +1,9 @@
-/** @module */
+/** @module modules/exporting-an-object */
 
 // Object literal `{}` assigned to `module.exports`
 // ==================================================
 
 /* NOTE: Notation for CommonJS modules works for Node.js modules too. */
-/* NOTICE: How the `@module` tag is not given a pathname, it is 'intelligent' enough to figure it out. */
 
 // Private members
 // ==================================================
@@ -64,11 +63,11 @@ module.exports = {
  * @summary This is a public method that will be included in the `module.exports`.
  * @description Example of a **public** method that was declared as a **private** function
  * but that will be exposed in `module.exports` as a property.<br>
- * Internally, calls [`publicMethodString`]{@link module:modules/module-exports-object.publicMethodString} method
- * using the [`privateConstant`]{@link module:modules/module-exports-object~privateConstant}.
- * @alias module:modules/module-exports-object.publicMethodNumber
+ * Internally, calls [`publicMethodString`]{@link module:modules/exporting-an-object.publicMethodString} method
+ * using the [`privateConstant`]{@link module:modules/exporting-an-object~privateConstant}.
+ * @alias module:modules/exporting-an-object.publicMethodNumber
  * @note If the `@alias` is not provided, then the function gets document as an **inner Method**.
- * @see [`publicMethodString`]{@link module:modules/module-exports-object.publicMethodString}
+ * @see [`publicMethodString`]{@link module:modules/exporting-an-object.publicMethodString}
  * @example
  * publicMethodNumber(0) // returns 20
  * module.exports.publicMethodNumber(5) // returns 25
@@ -94,13 +93,13 @@ module.exports.publicMethodString = function (str) {
 
 /**
  * @summary This is a public method that calls other private and public methods.
- * @description Calls [`privateMethod`]{@link module:modules/module-exports-object~privateMethod}
- * with the result of calling [`publicMethod`]{@link module:modules/module-exports-object.publicMethod}
+ * @description Calls [`privateMethod`]{@link module:modules/exporting-an-object~privateMethod}
+ * with the result of calling [`publicMethod`]{@link module:modules/exporting-an-object.publicMethod}
  * with a `false` value. Naturally, this will be always `true`. Then it returns the result
- * of calling [`publicMethodNumber`]{@link module:modules/module-exports-object.publicMethodNumber}
- * with the length of the result of calling [`publicMethodString`]{@link module:modules/module-exports-object.publicMethodString}
+ * of calling [`publicMethodNumber`]{@link module:modules/exporting-an-object.publicMethodNumber}
+ * with the length of the result of calling [`publicMethodString`]{@link module:modules/exporting-an-object.publicMethodString}
  * with the string `test`.
- * @alias module:modules/module-exports-object.publicMethodExec
+ * @alias module:modules/exporting-an-object.publicMethodExec
  * @note If the `@alias` is not provided, then the function gets document as an **inner Method**.
  * @example
  * publicMethodExec() // returns 26

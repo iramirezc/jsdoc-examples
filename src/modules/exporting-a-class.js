@@ -1,14 +1,13 @@
-/** @module */
+/** @module modules/exporting-a-class */
 
 // Class assigned to 'module.exports'
 // ==================================================
 
 /* NOTE: Notation for CommonJS modules works for Node.js modules too. */
-/* NOTICE: How the `@module` tag is not given a pathname, it is 'intelligent' enough to figure it out. */
 
 /**
- * Example of `module.exports` being `AnExportedClass`.
- * @alias module:modules/module-exports-class
+ * Example of `module.exports` being `AnExportedClass` class.
+ * @alias module:modules/exporting-a-class
  * @todo I actually do NOT like this way of exporting. I might need to look for an alternative.
  */
 class AnExportedClass {
@@ -23,7 +22,7 @@ class AnExportedClass {
   /**
    * @summary This is the summary of the `publicMethod`.
    * @description This is the description of the **public** method.
-   * @param {number} - Any number.
+   * @param {number} n - Any number.
    * @returns {number} The same provided number provided as argument.
    */
   publicMethod(n) {
