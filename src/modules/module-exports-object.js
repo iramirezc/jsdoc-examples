@@ -49,7 +49,7 @@ module.exports = {
    * module.exports.publicMethod(true) // returns true
    * module.exports.publicMethod(false) // returns false
    * @param {boolean} bool - A `boolean`.
-   * @returns {boolean} The same `boolean`.
+   * @returns {boolean} The same `boolean` provided.
    */
   publicMethod (bool) {
     return bool
