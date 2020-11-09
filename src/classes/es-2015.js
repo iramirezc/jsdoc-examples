@@ -18,7 +18,7 @@ class ASimpleClass {
   /**
    * @summary This is the summary of the `publicMethod`.
    * @description This is the description of the **public** method.
-   * @param {number} - Any number.
+   * @param {number} n - Any number.
    * @returns {number} The same provided number provided as argument.
    */
   publicMethod(n) {
@@ -54,7 +54,7 @@ const ASimpleClassFromExpression = class {
   /**
    * @summary This is the summary of the `publicMethod`.
    * @description This is the description of the **public** method.
-   * @param {number} - Any number.
+   * @param {number} n - Any number.
    * @returns {number} The same provided number provided as argument.
    */
   publicMethod(n) {
@@ -99,7 +99,7 @@ class ASubClass extends ASimpleClass {
   /**
    * @summary This is the summary of the `myOwnPublicMethod`.
    * @description This is the description of the **public** method.
-   * @param {number} - Any number.
+   * @param {number} n - Any number.
    * @returns {number} The same provided number provided as argument.
    */
   myOwnPublicMethod(n) {
@@ -133,7 +133,7 @@ class AnotherSubClass extends ASimpleClassFromExpression {
   /**
    * @summary This is the summary of the `myOwnPublicMethod`.
    * @description This is the description of the **public** method.
-   * @param {number} - Any number.
+   * @param {number} n - Any number.
    * @returns {number} The same provided number provided as argument.
    */
   myOwnPublicMethod(n) {
