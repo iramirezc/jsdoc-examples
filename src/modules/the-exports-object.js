@@ -1,10 +1,9 @@
-/** @module */
+/** @module modules/the-exports-object */
 
 // Properties of the `exports` object
 // ==================================================
 
 /* NOTE: Notation for CommonJS modules works for Node.js modules too. */
-/* NOTICE: How the `@module` tag is not given a pathname, it is 'intelligent' enough to figure it out. */
 
 // Private members
 // ==================================================
@@ -62,11 +61,11 @@ exports.publicMethod = function (bool) {
  * @summary This is a public method using an `@alias`.
  * @description Example of a **public** method that is declared in a constant
  * using an `@alias` and later is exported in the `exports` object.<br>
- * Internally, calls [`publicMethodString`]{@link module:modules/exports.publicMethodString} method
- * using the [`privateVariable`]{@link module:modules/exports~privateVariable}.
- * @alias module:modules/exports.publicMethodNumber
+ * Internally, calls [`publicMethodString`]{@link module:modules/the-exports-object.publicMethodString} method
+ * using the [`privateVariable`]{@link module:modules/the-exports-object~privateVariable}.
+ * @alias module:modules/the-exports-object.publicMethodNumber
  * @note If the `@alias` is not provided, then the function gets document as an **inner Method**.
- * @see [`publicMethodString`]{@link module:modules/exports.publicMethodString}
+ * @see [`publicMethodString`]{@link module:modules/the-exports-object.publicMethodString}
  * @example
  * publicMethodNumber(0) // returns 20
  * exports.publicMethodNumber(5) // returns 25
@@ -103,11 +102,11 @@ exports.publicMethodString = function (str) {
 
 /**
  * @summary This is a public method that calls other private and public methods.
- * @description Calls [`privateMethod`]{@link module:modules/exports~privateMethod}
- * with the result of calling [`publicMethod`]{@link module:modules/exports.publicMethod}
+ * @description Calls [`privateMethod`]{@link module:modules/the-exports-object~privateMethod}
+ * with the result of calling [`publicMethod`]{@link module:modules/the-exports-object.publicMethod}
  * with a `false` value. Naturally, this will be always `true`. Then it returns the result
- * of calling [`publicMethodNumber`]{@link module:modules/exports.publicMethodNumber}
- * with the length of the result of calling [`publicMethodString`]{@link module:modules/exports.publicMethodString}
+ * of calling [`publicMethodNumber`]{@link module:modules/the-exports-object.publicMethodNumber}
+ * with the length of the result of calling [`publicMethodString`]{@link module:modules/the-exports-object.publicMethodString}
  * with the string `test`.
  * @example
  * exports.publicMethodExec() // returns 26
