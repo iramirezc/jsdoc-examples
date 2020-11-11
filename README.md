@@ -6,7 +6,7 @@ Decided to create a repo with my own [JSDoc](https://jsdoc.app/index.html) examp
 
 ### As a quick reference guide
 
-Explore any of the JS files into the `src` folder to see examples of how the code is documented with [JSDoc](https://jsdoc.app/index.html).
+Explore any of the JS files into the [src](./src) folder to see examples of how the code is documented with [JSDoc](https://jsdoc.app/index.html).
 
 ### Generating the JSDocs in your local and watch them for real!
 
