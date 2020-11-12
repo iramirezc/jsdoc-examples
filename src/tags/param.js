@@ -373,6 +373,38 @@ function setArrayOfVectors(arrayOfVectors) { /* noop */ }
 function setArrayOfArrays(arrayOfArrays) { /* noop */ }
 
 /**
+ * @typedef MyArgsArray
+ * @type {Array}
+ * @property {number} 0 - A `number` representing the quantity of a product.
+ * @property {string} 1 - A `string` representing the name of a product.
+ * @property {boolean} 2 - A `boolean` representing if the product has a discount.
+ */
+
+/**
+ * @summary `@param {[number, string, boolean]}`
+ * @description Example of an `Array` of fixed values [`number`, `string`, `boolean`]
+ * @see {@link https://github.com/jsdoc/jsdoc/issues/1073}
+ * @example
+ * setArrayOfFixedValues([1, 'Apple', true])
+ * setArrayOfFixedValues([2, 'Bananas', false])
+ * @param {module:tags/@param~MyArgsArray} arrayOfFixedValues - The `Array` of length of 3
+ * containing `[quantity: number, name: string, onSale: boolean]`.
+ */
+function setArrayOfFixedValues(arrayOfFixedValues) { /* noop */ }
+
+/**
+ * @summary `@param {Array<number, string, boolean>}`
+ * @description Example 2 of an `Array` of fixed values [`number`, `string`, `boolean`]
+ * @note This is just a workaround, I don't believe this is the correct way of documenting.
+ * @example
+ * setArrayOfFixedValues2([1, 'Apple', true])
+ * setArrayOfFixedValues2([2, 'Bananas', false])
+ * @param {Array<number, string, boolean>} arrayOfFixedValues - The `Array` of length of 3
+ * containing `[quantity: number, name: string, onSale: boolean]`.
+ */
+function setArrayOfFixedValues2(arrayOfFixedValues) { /* noop */ }
+
+/**
  * @summary `@param {...number}`
  * @description Example of a variable number of `number` parameters.
  * @example
